@@ -1,0 +1,9 @@
+import mydecisionTree
+dataSet,labels=mydecisionTree.createDataSet()
+mydecisionTree.splitDataSet(myDat,0,1)
+
+reload(mydecisionTree)
+myTree=mydecisionTree.createTree(dataSet,labels)
+
+dataSet,labels=mydecisionTree.createDataSet()  经过创建树过程labels被改变  需要重新调用
+mydecisionTree.classify(myTree,labels,[1,0])  

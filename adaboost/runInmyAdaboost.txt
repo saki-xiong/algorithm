@@ -1,0 +1,19 @@
+import myAdaboost
+reload(myAdaboost)
+import numpy
+from numpy import*
+
+myAdaboost.buildbesttree(xmat,classLabels,D)
+
+
+xmat,classLabels=myAdaboost.loaddata()
+
+classifierArray=myAdaboost.adaboostTrain(xmat,classLabels,5)
+myAdaboost.adaClassify(6,classifierArray)
+
+
+import MLadaboost
+reload(MLadaboost)
+datArr,labelArr=MLadaboost.loadSimDat()
+classfierArr=MLadaboost.adaBoostTrainDS(datArr,labelArr,30)
+MLadaboost.adaClassify([0,0],classfierArr)

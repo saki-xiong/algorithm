@@ -1,0 +1,27 @@
+import myKNN
+
+import numpy
+from numpy import *
+import operator
+from os import listdir
+
+group,labels=myKNN.createDataSet()
+myKNN.KNNclassify([0.05,0.33],group,labels,3)
+
+datingDataMat,datingLabels=myKNN.file2matrix('E:\pythoncode\datingTestSet2.txt')
+
+import matplotlib
+import matplotlib.pyplot as plt
+fig=plt.figure()
+ax=fig.add_subplot(111)
+ax.scatter(datingDatMat[:,0],datingDatMat[:,1],15.0*array(datingLabels),15.0*array(datingLabels)) 
+plt.show()
+
+reload(myKNN)
+normMat,ranges,minVals=myKNN.autoNorm(datingDataMat)
+
+myKNN.datingClassTest()
+
+myKNN.classifyperson()
+
+myKNN.handwritingClassTest()
